@@ -132,14 +132,21 @@ DEFAULT_HEADERS = {
     'Connection': 'keep-alive',
     'Origin': 'https://grok.com',
     'Priority': 'u=1, i',
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
-    'Sec-Ch-Ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
+    #'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
+    #Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    #'Sec-Ch-Ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
+    #"Not:A-Brand";v="24", "Chromium";v="134"
+    'Sec-Ch-Ua': '"Not:A-Brand";v="24", "Chromium";v="134"',
     'Sec-Ch-Ua-Mobile': '?0',
-    'Sec-Ch-Ua-Platform': '"macOS"',
+    #'Sec-Ch-Ua-Platform': '"macOS"',
+    'Sec-Ch-Ua-Platform': '"Linux"',
+    #"Linux"
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-origin',
     'Baggage': 'sentry-public_key=b311e0f2690c81f25e2c4cf6d4f7ce1c'
+    #sentry-public_key=b311e0f2690c81f25e2c4cf6d4f7ce1c
 }
 
 CFPASS_SERVER = os.environ.get("CFPASS_SERVER") or None
